@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FactController;
+use App\Http\Controllers\ShowFactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('fact', FactController::class)->names('facts')->middleware('auth');
+
 
 Route::middleware([
     'auth:sanctum',

@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Fact;
 
@@ -10,13 +9,16 @@ class FactController extends Controller
 {
     public function index()
     {
-        $facts = Fact::all();
-        return view('admin.facts.index', compact('facts'));
+        $facts = Fact::where('state', 'Aceptado')
+                    ->where('city', auth()->user()->city)
+                    ->get();
+
+        return view('facts.index', compact('facts'));
     }
 
     public function create()
     {
-        //
+        return view('facts.create');
     }
 
     public function store(Request $request)
@@ -26,7 +28,7 @@ class FactController extends Controller
 
     public function show(Fact $fact)
     {
-        //
+        return view('facts.show', compact('fact'));
     }
 
     public function edit(Fact $fact)
@@ -36,10 +38,7 @@ class FactController extends Controller
 
     public function update(Request $request, Fact $fact)
     {
-        $fact->state = $request->input('state');
-        $fact->save();
-
-        return redirect()->route('admin.facts.index')->with('info', 'El hecho a sido actualizado');
+        //
     }
 
     public function destroy(Fact $fact)

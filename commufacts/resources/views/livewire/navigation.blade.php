@@ -51,7 +51,7 @@
   
                     {{-- Boton chatbot --}}
                   <div class="ml-2 flex justify-center items-center">
-                    <a href="/" type="button" class="relative rounded-full bg-gray-100 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <a href="{{route('facts.create')}}" type="button" class="relative rounded-full bg-gray-100 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span class="absolute -inset-1.5"></span>
                       <span class="sr-only">Resultados</span>
                       <svg class="w-6 h-6 text-gray-800 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
@@ -61,7 +61,7 @@
                   </div>
                     {{-- Boton resultados --}}
                   <div class="ml-2 flex justify-center items-center">
-                    <a href="/" type="button" class="relative rounded-full bg-gray-100 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <a href="{{route('facts.index')}}" type="button" class="relative rounded-full bg-gray-100 p-1 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span class="absolute -inset-1.5"></span>
                         <span class="sr-only">Resultados</span>
                         <svg class="w-6 h-6 text-gray-800 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
