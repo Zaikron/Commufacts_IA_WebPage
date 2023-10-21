@@ -18,10 +18,10 @@
             <div class="flex flex-1 items-center justify-center md:justify-start lg:justify-start ">
               {{-- Logo --}}
               <a href="/" class="flex flex-shrink-0 items-center">
-                <img class="h-8 w-auto" src="{{ asset('images/icon.png') }}" alt="Your Company">
+                <img class="h-8 w-auto" src="{{ asset('images/general/logo.png') }}" alt="Your Company">
               </a>
               <div class="px-2 justify-center my-2 mt-4">
-                <p class="font-bold text-2xl">Aspichat</p>
+                <p class="font-bold text-2xl mb-2 ml-2">Commufacts</p>
               </div>
   
               {{-- Menu --}}
@@ -87,11 +87,11 @@
                       <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">
                           Mi Perfil
                       </a>
-                      @can('admin.home')
-                      <a href="/" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">
+                      {{--@can('admin.home')--}}
+                      <a href="{{ route('admin.home') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">
                         Admin
                       </a>
-                      @endcan
+                      {{--@endcan--}}
                       
                       <form method="POST" action="{{ route('logout') }}" x-data>
                           @csrf
