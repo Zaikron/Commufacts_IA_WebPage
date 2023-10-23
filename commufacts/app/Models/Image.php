@@ -15,6 +15,6 @@ class Image extends Model
     ];
 
     public function facts(){
-        return $this->belongsTo(Fact::class);
+        return $this->belongsTo(Fact::class, 'fact_id');
     }
 }

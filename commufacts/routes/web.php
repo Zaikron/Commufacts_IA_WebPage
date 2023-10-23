@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FactController;
-use App\Http\Controllers\ShowFactController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::resource('fact', FactController::class)->names('facts')->middleware('auth');
+
+Route::resource('message', MessageController::class)->names('messages')->middleware('auth');
 
 
 Route::middleware([

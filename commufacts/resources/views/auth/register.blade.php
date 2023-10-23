@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img class="h-40 w-40 rounded-full bg-gray-50 p-4 shadow-lg" src="{{ asset('images/general/logo.png') }}" alt="">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -10,22 +10,44 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Name') }}" />
+                <x-label for="name" value="{{ __('Nombre') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
+                <x-label for="email" value="{{ __('Correo') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
+            <!-- Campos agregados -->
             <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
+                <x-label for="country" value="{{ __('Pais') }}" />
+                <select id="country" class="block mt-1 w-full border-gray-300 rounded-md" name="country" :value="old('country')" required>
+                    <option value="Mexico" selected>Mexico</option>
+                    <!-- Agrega más opciones -->
+                </select>
+            </div>
+            
+            <div class="mt-4">
+                <x-label for="city" value="{{ __('Ciudad') }}" />
+                <select id="city" class="block mt-1 w-full border-gray-300 rounded-md" name="city" :value="old('city')" required>
+                    <option value="Guadalajara" selected>Guadalajara</option>
+                    <option value="Tlaquepaque">Tlaquepaque</option>
+                    <option value="Zapopan">Zapopan</option>
+                    <option value="Puerto Vallarta">Puerto Vallarta</option>
+                    <option value="Arandas">Arandas</option>
+                    <!-- Agrega más opciones -->
+                </select>
+            </div>
+            
+
+            <div class="mt-4">
+                <x-label for="password" value="{{ __('Contraseña') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -48,11 +70,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('¿Ya estas registrado?') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Registrarme') }}
                 </x-button>
             </div>
         </form>

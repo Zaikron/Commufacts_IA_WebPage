@@ -16,11 +16,11 @@ class Message extends Model
     ];
 
     public function users(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function facts(){
-        return $this->belongsTo(Fact::class);
+        return $this->belongsTo(Fact::class, 'fact_id');
     }
 
 }
