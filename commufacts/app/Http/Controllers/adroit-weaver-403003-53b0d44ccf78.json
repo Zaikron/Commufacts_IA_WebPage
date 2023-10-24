@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "adroit-weaver-403003",
+  "private_key_id": "53b0d44ccf787f7f2b25dffba4a011afb1bce9d4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDPshUwHPhazWNa\ncBw27GaqPa6CLtruoc0ckrlZsifHjhJEqFrwen4U/nWmDJNVgD2qkH6tavozDcbp\nCjNc5gyWxu9C+XVmgl1TJXOpHWtNlLI63n7uHtUcazyiI4l85UFnabSyyS8/kdtr\npEghKGArogjecE0sZLheQnnQf31KDQsbn/z1g1x8n3YYLTYboyf2dAkO938W6oLy\nL7KjyxNYFFamGh0IjOoLSXNbrjOgwnBp+SeIfXUDc99OnN2Di7G3S971ioNZdL3r\nI5nCXF7Q768Cu8cq5FVHA1hrB9dYLsRrlM+3DrIQu0Q0NWvPayBu2mVFvNR3Ttep\n3cO81OB7AgMBAAECggEAOAFFRVwKfDG2AMUKVqUYaf+H9wK7dm2a6YGHCXDI2T6u\nHmVnYEEnjnGvN79cW0nhVwTvo8OdA/dLE7v0bbB65I1wJxctWR7+G1WWApw0Ow9F\noCou//bAcJFaID6E7HDFWiVe3Hbzjqi+CiCacpZ4mEtxKMoPhVEDhidWwaofFsBB\nLLq8kyHDJBudWfVKIQMUN6k+KBQgaCZW4Ym/EaRh06/q/v0aloW6nJO3/t/dxU+q\nTxxa/az/pWNyyEjb9bkzGZO0QRpBL/zkUzTgWWBGoibgMbZK6V0aq+5+K8d/FfDL\nHSeggSEwrhbdQ2580a18GEaQXpH9XCCfJQJfw2GNwQKBgQDw5ifFKYsSgd8ZPbqO\n8U2+P0aKHd5Fp/XsQ3xv4JlPFB8TjjMT7FBnqI4EZf+jLQdNWjZBkBDknDNBBDie\nDBd0XX4pPN9zb/HnlcE1pSsmQ62etgR/08CNgvTmfys/mokzhxQSYcyoMxZFdIfd\n3To6vI+S9xJ6V43sn8csdzmHZQKBgQDctxflFR7KEXvZ0UEb5Ad1nMqsd5z71Yks\nTC9epIywkDAnLgkzPdb5QUOnPpQS/A3jOWKQTHGztw40MpTcK3i/VrEd1iAxfNWi\nwuHvF0XZXw3hH8XQU6mwsFadHX8HQ4A7+avEvS+zp4fbt4LnS2SAGAE46TpYh2NZ\nDYr9oof6XwKBgQDJAYJVxWBBxRP+37723unbwLh/LoT04j0VMwp135aMoWF8075S\n9W/xzncRvHoeEchyBsAW3Lr7xkoOChOj7Lr1Yb2PczeP/ux+LDrXJEZo2zfXolEG\nyA13BrqKSbowjCXHVQKug+RcxKPkuGNWAO5BbGzwWDCW3M+TjY6Hz8O08QKBgQCl\nFEhJ7b8GkYcZhfn1m1q869Vmo1wFu1OKjzzKw7X6hQ2O8E6vRaxY5yhrmVF01ZKp\nhY0jshlEukBkaASQm+8G5Rc54qJXgS/kOXB0u+phR0gBPhtc0oZTgcB2aM5Op3zs\n3rNLRdi8vSvO+PVueyQi7lFTuJUMC88RlyCCzaJ4bwKBgCaMGZWPZXr8NxunHjUX\n6vECD0eJWFdEUMiVKMT04lwXwBciJydZ+IJLLcc9Bi9yGGPpLeelpH83PcHcLNGH\nr0Z1RZLWuN+zpPi3piWNIhnP+mLZjUU6RftVNdGpjxkTsSjJ9DDqTHBohgHs43BV\nUuz0HHuDhIeRe6+sBJBTC0++\n-----END PRIVATE KEY-----\n",
+  "client_email": "zaikron@adroit-weaver-403003.iam.gserviceaccount.com",
+  "client_id": "103654948486067912318",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zaikron%40adroit-weaver-403003.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

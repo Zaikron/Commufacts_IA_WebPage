@@ -11,7 +11,7 @@ class FactFactory extends Factory
     {
         return [
             'title' => $this->faker->text(30),
-            'text' => $this->faker->text(100),
+            'text' => $this->faker->text(1000),
             'country' => $this->faker->text(10),
             'city' => $this->faker->text(10),
             'address' => $this->faker->text(20),

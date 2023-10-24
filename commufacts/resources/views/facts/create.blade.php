@@ -8,8 +8,8 @@
 
     {{-- Alerta de confirmacion--}}
 @if (session('info'))
-<div class="alert alert-success">
-    <strong>{{session('info')}}</strong>
+<div class="w-full flex justify-center">
+    <strong class="p-4 bg-green-600 text-white font-bold text-xl rounded-lg flex justify-center mt-4">{{session('info')}}</strong>
 </div>
 @endif
 
@@ -72,7 +72,9 @@
                 </div>
                 
                 {{-- BOTON PARA ENVIAR FORM --}}
-                @livewire('create-fact')
+                <div class="flex justify-center p-4 w-full">
+                    {!! Form::submit('Publicar', ['class' => 'btn btn-primary bg-gray-800 text-white py-2 px-4 rounded-full text-lg mt-2 font-bold', 'style' => 'cursor: pointer;']) !!}
+                </div>
         
                 {!! Form::close() !!}
             </div>
@@ -90,7 +92,8 @@
         .create( document.querySelector( '#text' ) )
         .catch( error => {
             console.error( error );
-        } );
+    } );
+
 </script>
 
 

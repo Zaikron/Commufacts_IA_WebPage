@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
             'id' => 1,
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => bcrypt('ciscoenpa32'),
+            'password' => bcrypt('12345678'),
             'country' => 'Mexico',
             'city' => 'Tlaquepaque',
         ])/*->assignRole('Admin')*/;

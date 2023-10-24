@@ -30,7 +30,13 @@
                 @foreach ($fact->images as $image)
                 <div class="p-4 flex justify-center items-center">
                     <a href="{{ asset('images/facts/' . $image->path) }}" target="_blank">
-                        <img src="{{ Storage::url('images/facts/' . $image->path) }}" alt="Fact Image">
+                        @if(file_exists(storage_path('app/public/images/facts/' . $image->path)))
+                            <img src="{{ asset('images/facts/' . $image->path) }}" alt="Fact Image">
+                            <img src="{{ Storage::url('images/facts/' . $image->path) }}" alt="Fact Image" class="hidden">
+                        @else
+                            <img src="{{ Storage::url('images/facts/cel2.jpg') }}" alt="Fact Image" class="hidden">
+                            <img src="{{ asset('images/facts/cel2.jpg') }}" alt="Fact Image">
+                        @endif
                     </a>
                 </div>
                 @endforeach

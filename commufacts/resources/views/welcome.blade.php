@@ -6,17 +6,23 @@
 
 <x-app-layout>
 
-    <div class="justify-center items-center flex my-8">
-        <div class="grid grid-cols-1 md:lg:grid-cols-1 lg:grid-cols-2 place-items-stretch border-b-2 h-auto sm:w-full md:w-11/12 lg:w-4/6 p-4">
-  
-           <div class="text-gray-700 text-start px-4 py-2 m-2">
-              <p class="text-4xl font-bold text-gray-900 inline">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ipsa distinctio, </p> <p class="text-4xl font-bold text-orange-900 inline"> Commufacts.</p>
-              <p class="text-2xl text-gray-500 my-8">Commufacts Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusamus, perferendis illo adipisci libero laudantium unde iusto fugiat quia voluptas provident, corporis, aut mollitia alias nesciunt. Sequi, exercitationem natus! Commodi!.</p>
-              <a href="{{ route('facts.index') }}" class="py-2 px-4 bg-orange-700 text-white font-bold text-xl rounded-md">Comenzar</a>
+    <div class="justify-center items-center flex my-8 bg-white shadow-lg">
+        <div class="grid grid-cols-1 place-items-stretch border-b-2 h-auto sm:w-full md:w-11/12 lg:w-4/6 p-4 justify-center">
+            <div class="justify-center flex w-full">
+               <p class="text-xl text-gray-500 font-bold p-4">Bienvenido a la pagina principal del sitio</p>
+            </div><br>
+            <div class="text-gray-700 text-start px-4 py-2 m-2 flex justify-center">
+               <img class="h-48 w-48" src="{{ asset('images/general/logo.png') }}" alt="">
+            </div>
+
+           <div class="text-gray-700 text-center px-4 py-2 m-2 w-full flex justify-center">
+               <div class="lg:w-1/2 md:3/4 sm:w-full">
+                  <p class="text-4xl font-bold text-gray-900 inline">La plataforma orientada a mostrar los hechos importantes de tu comunidad, </p> <p class="text-4xl font-bold text-orange-900 inline"> Commufacts.</p>
+                  <p class="text-2xl text-gray-500 my-8">Commufacts es una plataforma dirigida a la comunidad en la que podran publicar hechos importantes ocurridos en sus alrededores, esto con el fin de tener un registro historico de acontecimientos importantes de sitios especificos</p>
+                  <a href="{{ route('facts.index') }}" class="py-2 px-4 bg-orange-700 text-white font-bold text-xl rounded-md">Comenzar</a>
+               </div>
            </div>
-           <div class="text-gray-700 text-start px-4 py-2 m-2 flex items-center justify-center">
-              <img class="h-80 w-80" src="{{ asset('images/general/logo.png') }}" alt="">
-           </div>
+           
         </div>  
      </div>
     
