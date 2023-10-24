@@ -6,6 +6,9 @@
 #### <p align="center"> Ciclo: 2023-B </p>
 
 > # Proyecto - Link del sitio: http://35.193.73.116/
+### Credenciales:
+#### Correo: admin@gmail.com
+#### Contraseña: 12345678
 
 #### Commufacts es una plataforma dirigida a la comunidad en la que podran publicar hechos importantes ocurridos en sus alrededores, esto con el fin de tener un registro historico de acontecimientos importantes de sitios especificos. Se utilizo Laravel para el desarrollo y para la inteligencia artificial se utilizo python
 
