@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Models\Fact;
 use App\Models\Image;
 use Illuminate\Support\Facades\Http;
+
 
 class FactController extends Controller
 {
@@ -60,13 +62,14 @@ class FactController extends Controller
             'country' => 'required',
             'city' => 'required',
             'address' => 'required',
-            //'images' => 'required|array|min:1',
-            //'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:4096', // Ajusta las reglas de validación según tus necesidades
+            'images' => 'required|array|max:10',
+            'images.*' => 'image|mimes:jpeg,png,jpg|max:4096', // Ajusta las reglas de validación según tus necesidades
         ]);
 
-
+        $server = 'localhost';
+        
         //CALCULOS DE PROBABILIDADES
-        $response = Http::post('http://localhost:3000/realizar-prediccion', [
+        $response = Http::post('http://' . $server . ':3000/realizar-prediccion', [
             'text' => $request->input('text'),
         ]);
         $type = $response->json();
@@ -84,23 +87,37 @@ class FactController extends Controller
         ]);
     
         if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                // Genera un nombre único para cada imagen
-                $imageName = time() . '_' . $image->getClientOriginalName();
-    
-                // Guarda la imagen en la carpeta "public/images/facts" con el nombre generado
-                $image->storeAs('public/images/facts', $imageName);
-    
-                // Crea una instancia del modelo Image y guarda los datos en la base de datos
-                Image::create([
-                    'path' => $imageName,
-                    'fact_id' => $fact->id, // Asigna el fact_id del nuevo Fact creado
-                ]);
-            }
-        }
+			foreach ($request->file('images') as $image) {
+				// Genera un nombre único para la imagen con la extensión correcta
+				$imageName = time() . '_' . auth()->user()->id . '.' . $image->getClientOriginalName();
+				$ruta_destino = public_path('images/facts/' . $imageName);
+
+				// Verifica si el directorio de destino existe, de lo contrario, créalo
+				if (!File::isDirectory(public_path('images/facts'))) {
+					File::makeDirectory(public_path('images/facts'), 0777, true, true);
+				}
+				
+				if($server == 'python-script-service'){
+                    try {
+						$image->move(public_path('images/facts'), $imageName);
+					} catch (\Exception $e) {
+						dd($e);
+					}
+                }else{
+                    file_put_contents($ruta_destino, file_get_contents($image));
+                }
+				
+				// Crea una instancia del modelo Image y guarda los datos en la base de datos
+				Image::create([
+					'path' => $imageName,
+					'fact_id' => $fact->id, // Asigna el fact_id del nuevo Fact creado
+				]);
+			}
+		}
     
         return redirect()->route('facts.create')->with('info', 'Se ha mandado a revisión la publicación');
     }
+
 
     public function show(Fact $fact)
     {
