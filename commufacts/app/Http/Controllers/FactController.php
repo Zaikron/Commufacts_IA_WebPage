@@ -31,6 +31,7 @@ class FactController extends Controller
                         ->orWhere('created_at', 'like', '%' . $search . '%')
                         ->orWhere('title', 'like', '%' . $search . '%');
                 })
+                ->orderBy('created_at', 'desc')
                 ->paginate(5);
 
         }else if($request->hasAny(['type'])){
@@ -38,10 +39,12 @@ class FactController extends Controller
 
             $facts = Fact::where('state', 'Aceptado')
                 ->where('type', $type)
+                ->orderBy('created_at', 'desc')
                 ->paginate(5);
         }else{
             $facts = Fact::where('state', 'Aceptado')
-                ->where('city', auth()->user()->city)
+                /*->where('city', auth()->user()->city)*/
+                ->orderBy('created_at', 'desc')
                 ->paginate(5);
         }
 
@@ -82,14 +85,14 @@ class FactController extends Controller
             'city' => $request->input('city'),
             'address' => $request->input('address'),
             'type' => $type,
-            'state' => 'Aceptado',
+            'state' => 'Denegado',/* Denegado */
             'user_id' => auth()->user()->id,
         ]);
     
         if ($request->hasFile('images')) {
 			foreach ($request->file('images') as $image) {
 				// Genera un nombre único para la imagen con la extensión correcta
-				$imageName = time() . '_' . auth()->user()->id . '.' . $image->getClientOriginalName();
+				$imageName = time() . '_' . auth()->user()->id . '_' . $image->getClientOriginalName();
 				$ruta_destino = public_path('images/facts/' . $imageName);
 
 				// Verifica si el directorio de destino existe, de lo contrario, créalo

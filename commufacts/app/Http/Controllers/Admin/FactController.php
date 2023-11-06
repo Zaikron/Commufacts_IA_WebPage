@@ -10,9 +10,10 @@ class FactController extends Controller
 {
     public function index()
     {
-        $facts = Fact::all();
+        $facts = Fact::orderBy('created_at', 'desc')->get();
         return view('admin.facts.index', compact('facts'));
     }
+
 
     public function create()
     {

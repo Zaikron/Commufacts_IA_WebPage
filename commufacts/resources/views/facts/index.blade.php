@@ -76,7 +76,7 @@
                             <div class="grid grid-cols-1 mb-2">
                                 <div>
                                     <p class="text-sm md:text-md lg:text-xl text-gray-500 px-0 md:px-4 lg:px-8">
-                                        {!! Str::limit($fact->text, $limit = 300, '...') !!}
+                                        {!! Str::limit($fact->text, $limit = 800, '...') !!}
                                     </p>
                                 </div><br>
                                 <div class="grid grid-cols-2 w-full h-full items-end px-0 md:px-4 lg:px-8">
