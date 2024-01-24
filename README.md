@@ -1,14 +1,6 @@
 > # UDG - CUCEI 
 > #### 24 de Octubre de 2023
-### <p align="center"> Anthony Esteven Sandoval Marquez, 215660767</p>
-#### <p align="center"> Materia: Programación para Internet </p>
-#### <p align="center"> Profesor: Michel Emanuel López Franco </p>
-#### <p align="center"> Ciclo: 2023-B </p>
-
-> # Proyecto - Link del sitio: http://35.193.73.116/
-### Credenciales:
-#### Correo: admin@gmail.com
-#### Contraseña: 12345678
+### <p align="center"> Anthony Esteven Sandoval Marquez</p>
 
 #### Commufacts es una plataforma dirigida a la comunidad en la que podran publicar hechos importantes ocurridos en sus alrededores, esto con el fin de tener un registro historico de acontecimientos importantes de sitios especificos. Se utilizo Laravel para el desarrollo y para la inteligencia artificial se utilizo python
 
